@@ -5,7 +5,8 @@ public final class HelloWorld
 	public static void main(String[] args) throws Exception
 	{
 		String id = args[0];
-		String outputDir= "/data/output/appresults/" + id + "/";
+		String dir = args[1];
+		String outputDir = dir + id + "/";
 		String outputFilename = "file.txt"; 
 		
 		// if the directory does not exist, create it
@@ -14,8 +15,7 @@ public final class HelloWorld
 		{
 			theDir.mkdirs();  
 		}
-		
-		
+
 		System.out.println("done");
 		PrintWriter writer = new PrintWriter(outputDir + outputFilename, "UTF-8");
 		writer.println("Hello World!!!");
