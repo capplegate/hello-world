@@ -2,9 +2,10 @@ import java.io.*;
 import java.util.*;
 public final class HelloWorld 
 {
-	public static void main(String[] args) throws Exception
+	public static void main(String[] args)
 	{
-		String id = args[0];
+		try
+		{String id = args[0];
 		String dir = args[1];
 		String outputDir = dir + id + "/";
 		String outputFilename = "file.txt"; 
@@ -22,5 +23,10 @@ public final class HelloWorld
 		writer.close();
 		System.out.println("Data output to " + outputFilename);
 		System.out.println("Process completed!");
+		}
+		catch(Exception e)
+		{
+			System.out.println("error");
+		}
 	}
 }
