@@ -1,9 +1,12 @@
 import java.io.*;
+import java.util.*;
 public final class HelloWorld 
 {
-
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
-		System.out.println("Hello World");
+		PrintWriter writer = new PrintWriter("output/outputFile.txt", "UTF-8");
+		writer.println("Hello World!!!");
+		writer.close();
+		System.out.println("Process completed!");
 	}
 }
