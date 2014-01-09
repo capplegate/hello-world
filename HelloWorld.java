@@ -7,8 +7,10 @@ public final class HelloWorld
 		try
 		{
 		String id = args[0];
+		double numA = Double.parseDouble(args[1]);
+		double numB = Double.parseDouble(args[2]);
 		String dir = "/data/output/appresults/" + id + "/folder/";
-		String outputFilename = "file.txt"; 
+		String outputFilename = "result.txt"; 
 		
 		// if the directory does not exist, create it
 		File theDir = new File(dir);
@@ -16,13 +18,11 @@ public final class HelloWorld
 		{
 			theDir.mkdirs();  
 		}
-
-		System.out.println("done");
+		System.out.println("Application begin!");
 		PrintWriter writer = new PrintWriter(dir + outputFilename, "UTF-8");
-		writer.println("Hello World!!!");
+		writer.println("The multiplication of " + numA + " and " + numB + " = " + numA * numB);
 		writer.close();
-		System.out.println("Data output to " + dir + outputFilename);
-		System.out.println("Process completed!");
+		System.out.println("Application end!");
 		}
 		catch(Exception e)
 		{
